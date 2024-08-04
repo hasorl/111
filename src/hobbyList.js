@@ -18,15 +18,15 @@ function HobbyList({
 
   const styles = {
     list: {
-      listStyleType: 'none', // 리스트 스타일 타입을 'none'으로 설정하여 가운데 점 제거
-      paddingLeft: '0', // 리스트의 기본 패딩 제거
+      listStyleType: 'none', 
+      paddingLeft: '0', 
     },
     listItem: {
       marginBottom: '5px',
     },
     title: {
-      fontSize: '16px',          // 이름, 이메일, 나이와 동일한 글씨 크기
-      fontWeight: 'normal',      // 동일한 글씨 굵기
+      fontSize: '16px',          
+      fontWeight: 'normal',    
     },
   };
 

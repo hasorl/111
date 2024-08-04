@@ -3,17 +3,14 @@ import Profile from './profile';
 import HobbyList from './hobbyList';
 
 function App() {
-  // 사용자 정보를 상태로 관리
-  const [name, setName] = useState('홍길동');
-  const [email, setEmail] = useState('honggildong@example.com');
-  const [age, setAge] = useState(30);
-  const [hobbies, setHobbies] = useState(['독서', '등산', '요리']);
+  const [name, setName] = useState('성하솔');
+  const [email, setEmail] = useState('hasol@ajou.ac.kr');
+  const [age, setAge] = useState(22);
+  const [hobbies, setHobbies] = useState(['농구하기', '코노가기', '선풍기']);
   
-  // 필드 수정 상태 관리
   const [editingField, setEditingField] = useState(null);
   const [isEditingHobbies, setIsEditingHobbies] = useState(false);
 
-  // 취미 추가 및 삭제 핸들러
   const handleAddHobby = (newHobby) => {
     if (newHobby.trim() !== '') {
       setHobbies([...hobbies, newHobby]);
@@ -27,17 +24,17 @@ function App() {
   const styles = {
     container: {
       padding: '20px',
-      backgroundColor: 'black',  // 배경색을 검은색으로
-      color: 'white',            // 글씨 색을 흰색으로
-      minHeight: '100vh',        // 페이지 전체에 배경 적용
+      backgroundColor: 'black',
+      color: 'white',
+      minHeight: '100vh',
     },
     header: {
       marginBottom: '20px',
-      color: 'white',            // 헤더 글씨 색을 흰색으로
+      color: 'white',
     },
     button: {
-      backgroundColor: 'blue',   // 버튼 배경색을 파란색으로
-      color: 'white',            // 버튼 글씨 색을 흰색으로
+      backgroundColor: 'pink',
+      color: 'black',
       border: 'none',
       padding: '5px 10px',
       cursor: 'pointer',
@@ -60,8 +57,8 @@ function App() {
         setAge={setAge}
         editingField={editingField}
         setEditingField={setEditingField}
-        buttonStyle={styles.button}  // 버튼 스타일 전달
-        inputStyle={styles.input}    // 입력 스타일 전달
+        buttonStyle={styles.button}
+        inputStyle={styles.input}
       />
       <HobbyList
         hobbies={hobbies}
@@ -69,8 +66,8 @@ function App() {
         deleteHobby={handleDeleteHobby}
         isEditingHobbies={isEditingHobbies}
         setIsEditingHobbies={setIsEditingHobbies}
-        buttonStyle={styles.button}  // 버튼 스타일 전달
-        inputStyle={styles.input}    // 입력 스타일 전달
+        buttonStyle={styles.button}
+        inputStyle={styles.input}
       />
     </div>
   );
